@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BSIT 2A Attendance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BSIT 2A Attendance Tracker</h1>
+        <h2>Add Student</h2>
+        <form action="create.php" method="POST" enctype="multipart/form-data">
+            <label>Student Name:</label>
+            <input type="text" name="student_name" required>
+
+            <label>Student ID Number:</label>
+            <input type="text" name="student_id" required> 
+
+            <label>Contact Number:</label>
+            <input type="text" name="contact_number" required>
+
+            <label>Sex:</label>
+            <select name="sex" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label>Address:</label>
+            <textarea name="address" required></textarea>
+
+            <label>Profile Picture (optional):</label>
+            <input type="file" name="profile_picture" accept="image/*">
+
+            <button type="submit">Add</button>
+        </form>
+        <br>
+        <a href="view.php" class="button-grey">View All Students</a>
+        <a href="attendance.php" class="button-grey">Mark Attendance</a>
+    </div>
+</body>
+</html>
