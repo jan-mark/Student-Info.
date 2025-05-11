@@ -1,8 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f0f4ff;
-    margin: 0;
-    padding: 0;
 }
 
 .container {
@@ -10,9 +8,11 @@ body {
     margin: 40px auto;
     background: #ffffff;
     border-radius: 10px;
-    padding: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-shadow: 10px 10px 48px 2px rgba(0,0,0,0.75);
+    border: 2px solid black;
 }
+
 
 h1, h2 {
     text-align: center;
@@ -38,10 +38,9 @@ input[type="date"],
 select,
 textarea {
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 6px;
     font-size: 14px;
-    background-color: #f9fbff;
     width: 100%;
     box-sizing: border-box;
 }
@@ -73,17 +72,21 @@ button[type="submit"]:hover {
     display: inline-block;
     margin-right: 10px;
     padding: 12px 20px;
-    background-color: transparent;
-    color: #7f8c8d;
     text-decoration: none;
-    border: 2px solid #7f8c8d;
+    border: 2px solid black;
     border-radius: 5px;
     transition: color 0.3s ease, border-color 0.3s ease;
 }
 
+.clickers{
+    padding-left: 5%;
+    display: flex;
+    gap: 40%;
+}
+
 .button-grey:hover {
-    color: #5d6d70;
-    border-color: #5d6d70;
+    border: 2px solid #2980b9;
+    color: black;
 }
 
 td {
