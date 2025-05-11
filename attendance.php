@@ -10,6 +10,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>Mark Attendance</title>
+    <link rel="shortcut icon" href="./icon/logo.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 p-6">
