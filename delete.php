@@ -4,13 +4,11 @@ require 'db.php';
 if (isset($_GET['student_id'])) {
     $student_id = $_GET['student_id'];
 
-    // First, delete attendance records linked to this student
     $attendance_stmt = $conn->prepare("DELETE FROM attendance WHERE student_id = ?");
     $attendance_stmt->bind_param("s", $student_id);
     $attendance_stmt->execute();
     $attendance_stmt->close();
 
-    // Fetch student info
     $stmt = $conn->prepare("SELECT profile_picture FROM students WHERE student_id = ?");
     $stmt->bind_param("s", $student_id);
     $stmt->execute();
@@ -19,13 +17,11 @@ if (isset($_GET['student_id'])) {
     $stmt->close();
 
     if ($student) {
-        // Delete profile picture if exists
         $profile_picture = $student['profile_picture'];
         if (!empty($profile_picture) && file_exists('uploads/' . $profile_picture)) {
             unlink('uploads/' . $profile_picture);
         }
 
-        // Now delete student record
         $delete_stmt = $conn->prepare("DELETE FROM students WHERE student_id = ?");
         $delete_stmt->bind_param("s", $student_id);
 
