@@ -8,7 +8,7 @@ CREATE TABLE students (
     contact_number VARCHAR(15),
     sex ENUM('Male', 'Female'),
     address TEXT,
-    profile_picture = null
+    profile_picture TEXT
 );
 
 CREATE TABLE attendance (
@@ -16,5 +16,12 @@ CREATE TABLE attendance (
     student_id VARCHAR(20), 
     date DATE,
     status ENUM('Present', 'Absent', 'Late', 'Excuse'),
-    FOREIGN KEY (student_id) REFERENCES students(student_id) 
+    FOREIGN KEY (student_id) REFERENCES students(student_id)
+        ON DELETE CASCADE
+);
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(100) NOT NULL
 );
