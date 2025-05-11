@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <title>BSIT 2A Attendance Tracker</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./icon/logo.png" type="image/x-icon">
 </head>
 <body>
+
     <div class="container">
-        <h1>BSIT 2A Attendance Tracker</h1>
-        <h2>Add Student</h2>
+        <h1>BSIT - 2A ATTENDANCE TRACKER</h1>
         <form action="create.php" method="POST" enctype="multipart/form-data">
             <label>Student Name:</label>
-            <input type="text" name="student_name" required>
+            <input type="text" name="student_name" placeholder="Ex. Sasuke" required>
 
             <label>Student ID Number:</label>
-            <input type="text" name="student_id" required> 
+            <input type="text" name="student_id" placeholder="Ex. 2022-2153" required> 
 
             <label>Contact Number:</label>
-            <input type="text" name="contact_number" required>
+            <input type="text" name="contact_number" placeholder="Ex. 09651234567" required>
 
             <label>Sex:</label>
             <select name="sex" required>
@@ -26,16 +27,18 @@
             </select>
 
             <label>Address:</label>
-            <textarea name="address" required></textarea>
+            <textarea name="address" placeholder="Ex. Ormoc City" required></textarea>
 
-            <label>Profile Picture (optional):</label>
+            <label>Profile Picture:</label>
             <input type="file" name="profile_picture" accept="image/*">
 
-            <button type="submit">Add</button>
+            <button type="submit">ADD STUDENT</button>
         </form>
         <br>
+        <div class="clickers">
         <a href="view.php" class="button-grey">View All Students</a>
         <a href="attendance.php" class="button-grey">Mark Attendance</a>
+        </div>
     </div>
 </body>
 </html>
