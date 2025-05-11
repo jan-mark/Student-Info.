@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssssss", $student_id, $student_name, $contact_number, $sex, $address, $profile_picture);
 
     if ($stmt->execute()) {
-        echo "<script>alert('Student added successfully!'); window.location.href = 'view.php';</script>";
+        echo "<script>alert('Student added successfully!'); window.location.href = 'index.html';</script>";
     } else {
         echo "Error: " . $stmt->error;
     }
