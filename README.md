@@ -1,4 +1,4 @@
-# Table
+# SQL 
 
 ```sql
 CREATE DATABASE manidlangan_crud;
